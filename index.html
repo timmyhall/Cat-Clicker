@@ -2,27 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cat Clicker</title>
+    <title>Cow Clicker</title>
+    <style>
+    .image {
+        text-align: center;
+        width: 100%;
+    }
+    .counter {
+        text-align: center;
+        width: 100%;
+    }
+    </style>
 </head>
 <body>
-    <ul data-bind="foreach: catList">
-        <li>
-            <span data-bind="text: name, click: $parent.setCat"></span>
-        </li>
-    </ul>
-    <div data-bind="with:currentCat">
-        <h2 data-bind="text: name"></h2>
-        <h4 data-bind="text: levels"></h4>
-        <div data-bind="text: clickCount"></div>
-        <img src="" alt="cute cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
-        <h4>Nicknames</h4>
-        <ul data-bind="foreach: nicknames">
-            <li>
-                <span data-bind="text: $data"></span>
-            </li>
-        </ul>
+    <div class="image">
+        <img src="img/Cow_cartoon_04.svg" alt="cow pic" data-bind="click: incrementCounter">
     </div>
-
+    <div class="counter">
+        <p data-bind="text: clickCount"></p>
+    </div>
     <script type='text/javascript' src='js/knockout.js'></script>
     <script src="js/click.js"></script>
 </body>
